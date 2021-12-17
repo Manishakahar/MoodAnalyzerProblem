@@ -1,7 +1,14 @@
 package com.blz.moodanalyser;
 
 public class MoodAnalyser {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Mood Analyser");
+    String message;
+
+    public String moodAnalyser(String mood) {
+        if (mood.toLowerCase().contains("sad")) {
+            return "sad";
+        } else {
+            return "happy";
+        }
     }
+
 }

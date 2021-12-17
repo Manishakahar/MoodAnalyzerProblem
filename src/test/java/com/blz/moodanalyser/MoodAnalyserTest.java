@@ -5,23 +5,23 @@ import org.junit.Test;
 
 public class MoodAnalyserTest {
     @Test
-    public void givenMessageWhenSadMoodItShouldReturnSadMood(){
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String actualResult = moodAnalyser.moodAnalyser("I am in sad mood");
+    public void givenMessageWhenContainsSadItShouldReturnSadMood(){
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in sad mood");
+        String actualResult = moodAnalyser.moodAnalyser();
         String expectedMood = "sad";
         Assert.assertEquals(actualResult, expectedMood);
     }
     @Test
-    public void givenMessageWhenHappyMoodItShouldReturnHappyMood(){
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String actualResult = moodAnalyser.moodAnalyser("I am in happy mood");
+    public void givenMessageWhenContainsHappyItShouldReturnHappyMood(){
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in happy mood");
+        String actualResult = moodAnalyser.moodAnalyser();
         String expectedMood = "happy";
         Assert.assertEquals(actualResult, expectedMood);
     }
     @Test
-    public void givenMessageWhenAnyMoodItShouldReturnAnyMood(){
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String actualResult = moodAnalyser.moodAnalyser("I am in any mood");
+    public void givenMessageWhenContainsAnyMoodItShouldReturnAnyMood(){
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in any mood");
+        String actualResult = moodAnalyser.moodAnalyser();
         String expectedMood = "happy";
         Assert.assertEquals(actualResult, expectedMood);
     }
